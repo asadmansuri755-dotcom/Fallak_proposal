@@ -150,7 +150,28 @@ button {
 
 </div>
 
+
 <script>
+const noBtn = document.querySelector(".time");
+const yesBtn = document.querySelector(".yes");
+
+noBtn.addEventListener("pointerenter", moveButton);
+
+noBtn.addEventListener("touchstart", function(e) {
+  e.preventDefault();
+  moveButton();
+});
+
+function moveButton() {
+  const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+  const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+  noBtn.style.position = "fixed";
+  noBtn.style.left = Math.max(10, Math.random() * maxX) + "px";
+  noBtn.style.top = Math.max(10, Math.random() * maxY) + "px";
+  noBtn.style.zIndex = "1000";
+}
+
 function answer(yes) {
   const result = document.getElementById("result");
   const message = document.getElementById("message");
@@ -159,15 +180,18 @@ function answer(yes) {
   result.style.display = "block";
 
   if (yes) {
-    message.innerText = "You made my day! ❤️";
+    message.innerText = "You made my day, Fallak! ❤️";
     submessage.innerText =
-      "Let's make something beautiful, one little moment at a time.";
+      "Here's to beautiful moments and a new beginning together. 💗";
   } else {
-    message.innerText = "That's completely okay 🌷";
+    message.innerText = "Thank you for being honest 🌷";
     submessage.innerText =
-      "Take all the time you need. Your feelings matter, and I'll respect your decision.";
+      "Your feelings matter, and I'll respect your choice.";
   }
+
+  noBtn.style.position = "static";
 }
+
 </script>
 
 </body>
