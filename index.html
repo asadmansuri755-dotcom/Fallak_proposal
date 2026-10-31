@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Fallak ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #ffe5ed, #f8c5d7, #fff0f4);
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 22px;
+  color: #74354d;
+  overflow-x: hidden;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 38px 25px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid white;
+  border-radius: 25px;
+  box-shadow: 0 15px 45px #b85c7830;
+}
+
+.heart {
+  font-size: 55px;
+  animation: beat 1.3s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.15); }
+}
+
+h1 {
+  font-size: 34px;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+.name {
+  color: #d14d79;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.yes {
+  background: #d85b85;
+  color: white;
+}
+
+.time {
+  background: #fff0f4;
+  color: #a34465;
+  border: 1px solid #e8a7bc;
+}
+
+#result {
+  display: none;
+  margin-top: 25px;
+}
+
+.small {
+  font-size: 13px;
+  opacity: .7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="heart">❤️</div>
+
+  <p>Something I've wanted to tell you...</p>
+
+  <h1>Hey, <span class="name">Fallak</span> 🌷</h1>
+
+  <p>
+    I don't know if words can ever explain
+    everything I feel, but I want to try.
+  </p>
+
+  <p>
+    Somewhere between our conversations,
+    your smile and the little moments,
+    you became someone really special to me.
+  </p>
+
+  <p>
+    I don't promise a perfect story.
+    I just want something genuine,
+    filled with honesty, care and respect.
+  </p>
+
+  <h2>So, Fallak...</h2>
+
+  <h2>Would you give us a chance? 💗</h2>
+
+  <div class="buttons">
+    <button class="yes" onclick="answer(true)">
+      Yes, let's give it a chance ❤️
+    </button>
+
+    <button class="time" onclick="answer(false)">
+      I need some time 🌸
+    </button>
+  </div>
+
+  <div id="result">
+    <h2 id="message"></h2>
+    <p id="submessage"></p>
+    <div style="font-size:35px">💕 🌷 💗</div>
+  </div>
+
+  <p class="small">Made with love, just for you.</p>
+
+</div>
+
+<script>
+function answer(yes) {
+  const result = document.getElementById("result");
+  const message = document.getElementById("message");
+  const submessage = document.getElementById("submessage");
+
+  result.style.display = "block";
+
+  if (yes) {
+    message.innerText = "You made my day! ❤️";
+    submessage.innerText =
+      "Let's make something beautiful, one little moment at a time.";
+  } else {
+    message.innerText = "That's completely okay 🌷";
+    submessage.innerText =
+      "Take all the time you need. Your feelings matter, and I'll respect your decision.";
+  }
+}
+</script>
+
+</body>
+</html>
